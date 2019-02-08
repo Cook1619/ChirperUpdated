@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 import CardList from "./components/CardList";
 import ChirpSubmit from "./components/ChirpSubmit";
+import Header from './components/Header';
 
 class App extends Component {
   constructor(props) {
@@ -42,11 +43,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid m-2">
-        <div className="row">
+      <div className="container">
+          <Header />
           <CardList cardArray={this.state.chirps} />
           <ChirpSubmit handleClick={this.handleClick} />
-        </div>
       </div>
     );
   }

@@ -7,9 +7,11 @@ const CardList = props => {
   });
 
   return (
-      <div className="col-md-9">
-        <div className="row flex-md-row">{cards}</div>
+    <div className="container">
+      <div className="row flex-md-row">
+        <div className="col">{cards}</div>
       </div>
+    </div>
   );
 };
 
