@@ -13,4 +13,4 @@ const Card = props => {
   );
 };
 
-export default Card;s
+export default Card;
