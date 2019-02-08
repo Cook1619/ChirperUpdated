@@ -39,14 +39,17 @@ class App extends Component {
         chirps: this.state.chirps.concat([newChirp])
       });
     };
+    this.handleSubmit = (event) => {
+      event.preventDefault();
+    }
   }
 
   render() {
     return (
       <div className="container">
           <Header />
+          <ChirpSubmit handleClick={this.handleClick} handleSubmit={this.handleSubmit}/>
           <CardList cardArray={this.state.chirps} />
-          <ChirpSubmit handleClick={this.handleClick} />
       </div>
     );
   }
